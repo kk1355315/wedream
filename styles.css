@@ -635,15 +635,18 @@ button {
 }
 
 .dream-studio__panel {
-  width: min(1120px, 100%);
+  width: min(960px, calc(100vw - 64px));
+  max-height: calc(100vh - 64px);
   background: #0f0f0f;
   border-radius: 28px;
   border: 1px solid rgba(255, 253, 2, 0.2);
   box-shadow: 0 30px 120px rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  padding: clamp(24px, 5vw, 40px);
+  gap: 28px;
+  padding: clamp(24px, 4vw, 36px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .dream-studio__header {
