@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>唯梦 WeDream · 梦境社区首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <aside class="sidebar">
+        <header class="sidebar__hero">
+          <img
+            class="sidebar__hero-image"
+            src="images/profile-hero.png"
+            alt="林星河的梦境封面"
+          />
+          <div class="sidebar__hero-overlay">
+            <p class="eyebrow">我的梦境档案</p>
+            <h1 class="sidebar__hero-name">林星河</h1>
+            <p class="sidebar__hero-handle">@dreamer-lin</p>
+            <p class="sidebar__hero-bio">
+              持续记录并用 AI 复现每一个醒来前的梦境瞬间。
+            </p>
+            <dl class="sidebar__stats">
+              <div>
+                <dt>128</dt>
+                <dd>关注中</dd>
+              </div>
+              <div>
+                <dt>2304</dt>
+                <dd>梦友关注</dd>
+              </div>
+            </dl>
+          </div>
+        </header>
+
+        <div class="sidebar__section">
+          <h2 class="sidebar__title">梦境关键词</h2>
+          <ul class="sidebar__chips">
+            <li>超现实主义</li>
+            <li>漂浮城市</li>
+            <li>深海巨兽</li>
+          </ul>
+        </div>
+
+        <div class="sidebar__section">
+          <h2 class="sidebar__title">梦境小组</h2>
+          <ul class="sidebar__communities">
+            <li>
+              <div>
+                <strong>星际造梦社</strong>
+                <span>. 32 位梦友正在共创</span>
+              </div>
+              <button type="button">加入</button>
+            </li>
+            <li>
+              <div>
+                <strong>记忆拼贴工坊</strong>
+                <span>. 18 位梦友在修复梦片</span>
+              </div>
+              <button type="button">加入</button>
+            </li>
+            <li>
+              <div>
+                <strong>清醒梦练习室</strong>
+                <span>. 41 位梦友在线练习</span>
+              </div>
+              <button type="button">加入</button>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="feed">
+        <nav class="stories">
+          <button class="stories__nav stories__nav--prev" aria-label="上一条梦境故事">
+            <span>‹</span>
+          </button>
+          <ul class="stories__list">
+            <li>
+              <button class="story story--active">
+                <span class="story__ring story__ring--accent"></span>
+                <span class="story__avatar">
+                  <img src="images/avatar-elviz.png" alt="林星河" />
+                </span>
+                <span class="story__name">我</span>
+              </button>
+            </li>
+            <li>
+              <button class="story">
+                <span class="story__ring"></span>
+                <span class="story__avatar">
+                  <img src="images/story-amanda.png" alt="苏以晴" />
+                </span>
+                <span class="story__name">以晴</span>
+              </button>
+            </li>
+            <li>
+              <button class="story">
+                <span class="story__ring"></span>
+                <span class="story__avatar">
+                  <img src="images/story-fedrick.png" alt="陈观澜" />
+                </span>
+                <span class="story__name">观澜</span>
+              </button>
+            </li>
+            <li>
+              <button class="story">
+                <span class="story__ring"></span>
+                <span class="story__avatar">
+                  <img src="images/story-jhon.png" alt="鹿声" />
+                </span>
+                <span class="story__name">鹿声</span>
+              </button>
+            </li>
+            <li>
+              <button class="story">
+                <span class="story__ring"></span>
+                <span class="story__avatar">
+                  <img src="images/story-rishal.png" alt="周昼" />
+                </span>
+                <span class="story__name">周昼</span>
+              </button>
+            </li>
+            <li>
+              <button class="story">
+                <span class="story__ring"></span>
+                <span class="story__avatar">
+                  <img src="images/story-sinan.png" alt="简未眠" />
+                </span>
+                <span class="story__name">未眠</span>
+              </button>
+            </li>
+            <li>
+              <button class="story">
+                <span class="story__ring"></span>
+                <span class="story__avatar">
+                  <img src="images/story-david.png" alt="黎若岚" />
+                </span>
+                <span class="story__name">若岚</span>
+              </button>
+            </li>
+            <li>
+              <button class="story">
+                <span class="story__ring"></span>
+                <span class="story__avatar">
+                  <img src="images/story-chris.png" alt="沈意北" />
+                </span>
+                <span class="story__name">意北</span>
+              </button>
+            </li>
+          </ul>
+          <button class="stories__nav stories__nav--next" aria-label="下一条梦境故事">
+            <span>›</span>
+          </button>
+        </nav>
+
+        <form class="composer" action="#">
+          <img src="images/avatar-elviz.png" alt="林星河" class="composer__avatar" />
+          <input
+            class="composer__input"
+            placeholder="写下你刚醒来的梦境..."
+            readonly
+          />
+          <button type="button" class="composer__button">保存</button>
+        </form>
+        <section class="dream-studio" aria-hidden="true">
+          <div class="dream-studio__panel">
+            <header class="dream-studio__header">
+              <div>
+                <p class="dream-studio__eyebrow">唯梦 · 视频共创工作台</p>
+                <h2>记录你的梦境，唤醒新的影像</h2>
+              </div>
+              <button type="button" class="dream-studio__close" aria-label="关闭梦境工作台">×</button>
+            </header>
+            <div class="dream-studio__body">
+              <form class="dream-studio__form">
+                <div class="dream-studio__inputs">
+                  <label for="dream-text">梦境描述</label>
+                  <textarea
+                    id="dream-text"
+                    placeholder="写下你看到、听到、感受到的一切……"
+                    rows="6"
+                  ></textarea>
+                  <div class="dream-studio__controls">
+                    <button type="button" class="dream-studio__primary">生成视频</button>
+                    <button type="button" class="dream-studio__secondary">上传素材</button>
+                    <div class="dream-studio__meta">
+                      <span>预计生成时间：1 分钟</span>
+                      <span>剩余配额：3 次</span>
+                    </div>
+                  </div>
+                  <div class="dream-studio__status"></div>
+                </div>
+                <aside class="dream-studio__aside">
+                  <section>
+                    <h3>灵感示例</h3>
+                    <ul>
+                      <li>“我在星海图书馆追逐记忆碎片，书页变成流光。”</li>
+                      <li>“雨水逆流回云层，街道浮现上辈子的投影。”</li>
+                      <li>“时间做成果冻，我在其中走出一条闪电。”</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h3>生成设置</h3>
+                    <div class="dream-studio__setting">
+                      <span>风格</span>
+                      <div>
+                        <button type="button" class="is-active">超现实主义</button>
+                        <button type="button">丝滑水墨</button>
+                        <button type="button">复古赛博</button>
+                      </div>
+                    </div>
+                    <div class="dream-studio__setting">
+                      <span>时长</span>
+                      <div>
+                        <button type="button" class="is-active">30 秒</button>
+                        <button type="button">45 秒</button>
+                        <button type="button">60 秒</button>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h3>最近生成</h3>
+                    <ul class="dream-studio__history">
+                      <li>
+                        <strong>《浮空鲸落》</strong>
+                        <span>10 月 28 日 · 21:16</span>
+                      </li>
+                      <li>
+                        <strong>《钟楼森林逆生》</strong>
+                        <span>10 月 27 日 · 00:41</span>
+                      </li>
+                      <li>
+                        <strong>《影市之狐》</strong>
+                        <span>10 月 25 日 · 18:05</span>
+                      </li>
+                    </ul>
+                  </section>
+                </aside>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <article class="post">
+          <header class="post__header">
+            <img src="images/Gemini_Generated_Image_dt03a2dt03a2dt03.png" alt="沈慕白头像" class="post__avatar" />
+            <div>
+              <h3 class="post__name">沈慕白</h3>
+              <p class="post__meta">@moonbinder · 2 小时前</p>
+            </div>
+            <button class="post__follow">关注</button>
+          </header>
+          <video class="post__media" src="videos/倒挂彩色玻璃城市奇景.mp4" controls playsinline muted loop>
+            您的浏览器不支持视频标签。
+          </video>
+          <div class="post__body">
+            <p>
+              我仰望一座倒挂的彩玻城，绿色的三轮残月照着向上奔流的根须之河，羽翼水母掠过静默的船影。
+            </p>
+          </div>
+          <footer class="post__footer">
+            <button type="button">喜欢</button>
+            <button type="button">评论</button>
+            <button type="button">分享</button>
+          </footer>
+          <div class="post__comment">
+            <img src="images/avatar-elviz.png" alt="林星河头像" />
+            <input placeholder="写下你的共鸣..." />
+            <button type="button">发送</button>
+          </div>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <img src="images/Gemini_Generated_Image_trbbbmtrbbbmtrbb.png" alt="江璃夏头像" class="post__avatar" />
+            <div>
+              <h3 class="post__name">江璃夏</h3>
+              <p class="post__meta">@neondream · 4 小时前</p>
+            </div>
+            <button class="post__follow">关注</button>
+          </header>
+          <video class="post__media" src="videos/梦境二：怪诞集市视频生成.mp4" controls playsinline muted loop>
+            您的浏览器不支持视频标签。
+          </video>
+          <div class="post__body">
+            <p>
+              巨型向日葵流淌着融化的钟面，集市里无面丝偶贩卖声音与影子，一只星空皮毛的鹿角狐狸从光源地底缓步而过。
+            </p>
+          </div>
+          <footer class="post__footer">
+            <button type="button">喜欢</button>
+            <button type="button">评论</button>
+            <button type="button">分享</button>
+          </footer>
+          <div class="post__comment">
+            <img src="images/avatar-elviz.png" alt="林星河头像" />
+            <input placeholder="写下你的共鸣..." />
+            <button type="button">发送</button>
+          </div>
+        </article>
+      </section>
+
+      <aside class="rightbar">
+        <div class="rightbar__header">
+          <button type="button" aria-label="梦境通知" class="icon-button">
+            <span>🔔</span>
+          </button>
+          <button type="button" aria-label="梦友私信" class="icon-button">
+            <span>💬</span>
+          </button>
+          <button type="button" aria-label="个人头像" class="icon-button icon-button--avatar">
+            <img src="images/avatar-elviz.png" alt="林星河头像" />
+          </button>
+        </div>
+
+        <section class="rightbar__section">
+          <h2 class="rightbar__title">最新互动</h2>
+          <ul class="activity-list">
+            <li>
+              <img src="images/activity-george.png" alt="岑语舟头像" />
+              <div>
+                <strong>岑语舟</strong>
+                <span>刚刚关注了你 · 3 分钟前</span>
+              </div>
+              <div class="activity-list__actions">
+                <button>回关</button>
+                <button>忽略</button>
+              </div>
+            </li>
+            <li>
+              <img src="images/activity-abhilash.png" alt="顾岚晚头像" />
+              <div>
+                <strong>顾岚晚</strong>
+                <span>刚刚收藏了你的梦境</span>
+              </div>
+              <div class="activity-list__actions">
+                <button>回关</button>
+                <button>忽略</button>
+              </div>
+            </li>
+            <li>
+              <img src="images/activity-johnwick.png" alt="鹿声头像" />
+              <div>
+                <strong>鹿声</strong>
+                <span>在评论区提到了你</span>
+              </div>
+              <div class="activity-list__actions">
+                <button>回复</button>
+                <button>忽略</button>
+              </div>
+            </li>
+            <li>
+              <img src="images/activity-brahim.png" alt="孟青禾头像" />
+              <div>
+                <strong>孟青禾</strong>
+                <span>向你发出共创梦境邀请</span>
+              </div>
+              <div class="activity-list__actions">
+                <button>接受</button>
+                <button>稍后再说</button>
+              </div>
+            </li>
+            <li>
+              <img src="images/activity-cristano.png" alt="沈意北头像" />
+              <div>
+                <strong>沈意北</strong>
+                <span>刚刚关注了你 · 5 分钟前</span>
+              </div>
+              <div class="activity-list__actions">
+                <button>回关</button>
+                <button>忽略</button>
+              </div>
+            </li>
+            <li>
+              <img src="images/activity-michel.png" alt="米迦头像" />
+              <div>
+                <strong>米迦</strong>
+                <span>把你加入了梦境书签夹</span>
+              </div>
+              <div class="activity-list__actions">
+                <button>致谢</button>
+                <button>忽略</button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </aside>
+    </main>
+    <footer class="page-footer">
+      <small>© 2025 唯梦 WeDream</small>
+    </footer>
+
+    <script>
+      (() => {
+        const composer = document.querySelector('.composer');
+        const studio = document.querySelector('.dream-studio');
+        const closeBtn = document.querySelector('.dream-studio__close');
+        const textarea = studio?.querySelector('#dream-text');
+        const generateBtn = studio?.querySelector('.dream-studio__primary');
+        const statusBox = studio?.querySelector('.dream-studio__status');
+        const feed = document.querySelector('.feed');
+        const composerInput = composer?.querySelector('.composer__input');
+        const composerButton = composer?.querySelector('.composer__button');
+        if (!composer || !studio || !closeBtn || !textarea || !generateBtn || !statusBox || !feed || !composerInput || !composerButton) return;
+
+        const settingGroups = studio.querySelectorAll('.dream-studio__setting');
+
+        const TARGET_PROMPT =
+          '梦中我是齐国的皇帝然后这个齐国是一个在小秘境里的国家，就是洞天福地那种，然后有四个人反对我，我直接变身狗头就是英雄联盟里面那个，然后我拿了一个叫心音灵刃的服务，开大然后开q技能一斧头一个把他们都打败了';
+        const TARGET_NORMALIZED = TARGET_PROMPT.replace(/\s+/g, ' ').trim();
+        const PREVIEW_VIDEO = 'videos/齐国皇帝梦境变身狗头.mp4';
+
+        let generationTimeout = null;
+
+        const normalize = (text) => text.replace(/\s+/g, ' ').trim();
+
+        const resetStudio = (clearAll = false) => {
+          if (generationTimeout) {
+            clearTimeout(generationTimeout);
+            generationTimeout = null;
+          }
+          statusBox.innerHTML = '';
+          generateBtn.disabled = false;
+          if (clearAll) {
+            textarea.value = '';
+          }
+        };
+
+        const openStudio = () => {
+          resetStudio(false);
+          studio.classList.add('dream-studio--open');
+          studio.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('is-studio-open');
+          textarea.focus();
+        };
+
+        const closeStudio = () => {
+          studio.classList.remove('dream-studio--open');
+          studio.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('is-studio-open');
+          resetStudio(true);
+        };
+
+        const showMessage = (message) => {
+          statusBox.innerHTML = `<div class="dream-studio__message"><p>${message}</p></div>`;
+        };
+
+        const showConfirmPrompt = () => {
+          generateBtn.disabled = true;
+          statusBox.innerHTML = `
+            <div class="dream-studio__prompt">
+              <p>我捕捉到的梦境核心是：</p>
+              <p class="dream-studio__highlight">
+                你在秘境齐国称帝，被四名反对者围攻；你化身狗头军神，提起心音灵刃开启终极形态，逐一将敌人击溃。
+              </p>
+              <p>这样的理解正确吗？</p>
+              <div class="dream-studio__actions">
+                <button type="button" class="dream-studio__primary" data-action="confirm-intent">是的，开始生成</button>
+                <button type="button" class="dream-studio__secondary" data-action="edit-intent">我再调整描述</button>
+              </div>
+            </div>
+          `;
+        };
+
+        const showGenerating = () => {
+          generateBtn.disabled = true;
+          statusBox.innerHTML = `
+            <div class="dream-studio__progress">
+              <p>梦境构建中...</p>
+              <div class="dream-studio__spinner" aria-hidden="true"></div>
+              <p class="dream-studio__progress-info">正在重建「秘境齐国 · 心音灵刃觉醒」的全部场景...</p>
+            </div>
+          `;
+          generationTimeout = window.setTimeout(() => {
+            generationTimeout = null;
+            showResult();
+          }, 2600);
+        };
+
+        const showResult = () => {
+          generateBtn.disabled = false;
+          statusBox.innerHTML = `
+            <div class="dream-studio__result">
+              <video class="dream-studio__preview" src="${PREVIEW_VIDEO}" controls playsinline muted loop>
+                您的浏览器不支持视频标签。
+              </video>
+              <p>梦境预览已生成，是否要发布到大厅？</p>
+              <div class="dream-studio__actions">
+                <button type="button" class="dream-studio__primary" data-action="publish-result">发布到大厅</button>
+                <button type="button" class="dream-studio__secondary" data-action="close-result">稍后再说</button>
+              </div>
+            </div>
+          `;
+        };
+
+        const publishPost = () => {
+          const existing = feed.querySelector('.post.post--mine');
+          if (existing) existing.remove();
+          const article = document.createElement('article');
+          article.className = 'post post--mine';
+          article.innerHTML = `
+            <header class="post__header">
+              <img src="images/avatar-elviz.png" alt="林星河头像" class="post__avatar" />
+              <div>
+                <div class="post__title-row">
+                  <h3 class="post__name">林星河</h3>
+                  <span class="post__badge">我的梦境</span>
+                </div>
+                <p class="post__meta">@dreamer-lin · 刚刚</p>
+              </div>
+              <button class="post__follow" disabled>已发布</button>
+            </header>
+            <video class="post__media" src="${PREVIEW_VIDEO}" controls playsinline muted loop>
+              您的浏览器不支持视频标签。
+            </video>
+            <div class="post__body">
+              <p>
+                我在秘境齐国化身狗头军神，握着心音灵刃开启终极形态，一斧一个地击溃四名叛逆，直到梦醒心跳仍在急速奔腾。
+              </p>
+            </div>
+            <footer class="post__footer">
+              <button type="button">喜欢</button>
+              <button type="button">评论</button>
+              <button type="button">分享</button>
+            </footer>
+            <div class="post__comment">
+              <img src="images/avatar-elviz.png" alt="林星河头像" />
+              <input placeholder="写下你的共鸣..." />
+              <button type="button">发送</button>
+            </div>
+          `;
+          const firstPost = feed.querySelector('.post');
+          feed.insertBefore(article, firstPost ?? null);
+          closeStudio();
+        };
+
+        const handleComposerOpen = (event) => {
+          event.preventDefault();
+          openStudio();
+        };
+
+        composer.addEventListener('click', handleComposerOpen);
+        composerInput.addEventListener('focus', handleComposerOpen);
+        composerInput.addEventListener('keydown', handleComposerOpen);
+        composerButton.addEventListener('click', handleComposerOpen);
+        composer.addEventListener('submit', handleComposerOpen);
+
+        closeBtn.addEventListener('click', (event) => {
+          event.stopPropagation();
+          closeStudio();
+        });
+
+        studio.addEventListener('click', (event) => {
+          if (event.target === studio) {
+            closeStudio();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && studio.classList.contains('dream-studio--open')) {
+            closeStudio();
+          }
+        });
+
+        generateBtn.addEventListener('click', (event) => {
+          event.preventDefault();
+          if (generateBtn.disabled) return;
+          const value = normalize(textarea.value);
+          if (!value) {
+            showMessage('先写下你的梦境，再开启共创视频。');
+            textarea.focus();
+            return;
+          }
+          if (value === TARGET_NORMALIZED) {
+            showConfirmPrompt();
+          } else {
+            showMessage('AI 共创视频仍在训练中，目前仅开放示例梦境体验。');
+          }
+        });
+
+        statusBox.addEventListener('click', (event) => {
+          const target = event.target;
+          if (!(target instanceof HTMLElement)) return;
+          const action = target.dataset.action;
+          if (!action) return;
+          event.preventDefault();
+          if (action === 'confirm-intent') {
+            showGenerating();
+          } else if (action === 'edit-intent') {
+            resetStudio(false);
+            textarea.focus();
+          } else if (action === 'publish-result') {
+            publishPost();
+          } else if (action === 'close-result') {
+            closeStudio();
+          }
+        });
+
+        settingGroups.forEach((group) => {
+          group.addEventListener('click', (event) => {
+            const target = event.target;
+            if (!(target instanceof HTMLElement)) return;
+            if (target.tagName.toLowerCase() !== 'button') return;
+            event.preventDefault();
+            group.querySelectorAll('button').forEach((btn) => btn.classList.remove('is-active'));
+            target.classList.add('is-active');
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
